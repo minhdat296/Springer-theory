@@ -1,0 +1,61 @@
+\section{Classical complex Springer theory}
+    \subsection{Unipotent loci of connected reductive groups}
+        \subsubsection{A resolution of singularities for unipotent loci}
+            We begin by recalling the notion of unipotence.
+            \begin{definition}[Unipotent elements] \label{def: unipotent_elements}
+                Suppose that $R$ is a ring, which need not be commutative. An element $r \in R$ is then said to be \textbf{unipotent} if and only if $r - 1$ is nilpotent, and the ring $R$ itself is said to be \textbf{unipotent} if all of its elements $r \in R$ are unipotent. 
+            \end{definition}
+            \begin{example}[Unipotent matrices] \label{example: unipotent_matrices}
+                A unipotent $n \x n$ matrix (for some $n \geq 1$) with coefficients in some ring $R$ is an $n \x n$ upper-triangular matrix with diagonal entires all being the multiplicative identity $1$. Observe that for any ring $R$ and any pair of nilpotent elements $r, r' \in \Nil(R)$, because $(1 + r)(1 + r') = 1 + r + r' + rr'$ and because $(1 + r')(1 + r) = 1 + r' + r + r'r$, one sees that the set of all $n \x n$ unipotent matrices over $R$ form a subgroup of $\GL_n(R)$, which we denote by $\U_n(R)$ (observe also that unipotent matrices necessarily have determinant $1$).
+            \end{example}
+            \begin{definition}[Unipotent algebraic groups] \label{def: unipotent_algebraic_groups}
+                An affine algebraic group $U$ over a field $k$ is said to be \textbf{unipotent} if the ring $\End_k(k[U])$ of $k$-linear endomorphisms of its global section $k[U]$ is unipotent.
+            \end{definition}
+            \begin{remark}[The unipotent locus of an affine algebraic group] \label{remark: the_unipotence_locus_of_an_affine_algebraic_group}
+                Let $G$ be an affine algebraic group over a field $k$ and recall that such a group scheme admits a closed immersion over $\Spec k$ into $(\GL_n)_k$ for some $n \geq 1$, with said closed immersion being a group $k$-scheme homomorphism \textit{a priori}. One can then define the \textbf{unipotent locus} over $\Spec k$ of $G$ to be the scheme-theoretic intersection $U_G \cong (\U_n)_k \cap G$, and observe that $U_G$ is \textit{a priori} a closed subgroup of $G$ over $\Spec k$ thanks to closed-immersions being pullback-stable and fpqc-local.
+            \end{remark}
+            
+            \begin{remark}[Existence and uniqueness of unipotent radicals] \label{remark: existence_and_uniqueness_of_unipotent_radicals}
+                Suppose that $G$ is a Zariski-connected affine algebraic group over a field $k$ and that $U, U' \leq G$ are \textit{normal} unipotent subgroups affine algebraic subgroups of $G$. The normal subgroup $UU'$ that they generate - which is necessarily closed and affine inside of $G$ - is also unipotent. From this, and from the fact that normal subgroups form a lattice with maximal elements, $G$ must admit maximal connected unipotent closed normal subgroups; furthermore, because $G$ is connected, there is only one such (connected) unipotent closed normal subgroup. We shall denote said subgroup by $\frakU_G$ and dub it the \say{\textbf{unipotent radical}} of $G$.   
+            \end{remark}
+            \begin{definition}[Unipotent radicals of affine algebraic groups] \label{def: unipotent_radicals_of_affine_algebraic_groups}
+                The \textbf{unipotent radical} of an algebraic group is its unique maximal connected unipotent closed normal subgroup.
+            \end{definition}
+            \begin{definition}[Solvability] \label{def: solvability}
+                An abstract group $G$ is said to be \textbf{solvable} if and only if it admits a finite-length Jordan-H\"older series $1 \leq N_1 \leq ... \leq N_{n - 1} \leq G$ wherein the components $N_i \leq G$ are all normal subgroups of $G$, and the factors $N_{i + 1}/N_i$ are all abelian.  
+            \end{definition}
+            \begin{definition}[Radicals of affine algebraic groups] \label{def: radicals_of_affine_algebraic_groups}
+                The \textbf{radical} of an affine algebraic group is its (necessarily) unique maximal connected solvable closed normal subgroup.
+            \end{definition}
+            \begin{proposition}[Unipotent radicals are radicals of unipotent loci] \label{prop: unipotent_radicals_are_radicals_of_unipotent_loci}
+                Let $G$ be a connected affine algebraic group over a field $k$ and let $U_G$ denote its unipotent locus. Then $\frakU_G \cong \rad(U_G)$ as group $k$-schemes.
+            \end{proposition}
+                \begin{proof}
+                            
+                \end{proof}
+            \begin{proposition}
+                Let $G$ be an affine algebraic group over an algebraically closed field $k$ of characteristic $0$. Then, the unipotent locus $U_G$ will be Zariski-irreducible as a $k$-scheme of pure dimension $2\dim \frakU_G$.
+            \end{proposition}
+                \begin{proof}
+                    
+                \end{proof}
+            
+            \begin{convention}
+                From now on, we work within the following setting:
+                    \begin{itemize}
+                        \item A Zariski-connected reductive algebraic group $G$ over $\Spec \bbC$ with unipotent locus $U_G$ and unipotent radical $\frakU_G$.
+                        \item A Borel subgroup $B \leq G$ wherein we fix the maximal torus $T := B/U_G$.
+                        \item One can then also define the Weyl group associated to the triple $(G, U_G, B)$, which is $W_G := \Norm_{G/\bbC}(T)/T$. This is a finite group. 
+                    \end{itemize}
+            \end{convention}
+            \begin{convention}
+                Products of schemes will always be understood to be taken in $\Sch_{/\Spec \bbC}$.
+            \end{convention}
+            
+            \begin{definition}[The Springer Map] \label{def: springer_map}
+                The \textbf{Springer map} associated to the triple $(G, U_G, B)$ is the canonical $B$-equivariant map $\Spr_{U_G}: \tilde{U}_G \to U_G$, where $\tilde{U}_G$ is the $B$-equivariant pullback $U_G \x^B G$.
+            \end{definition}
+        
+        \subsubsection{The Springer Sheaf}
+    
+    \subsection{The Springer Functor}
